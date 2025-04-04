@@ -13,6 +13,9 @@ public class Libro {
         this.disponible = disponible;
     }
 
+    public Libro(String titulo, String autor, String isbn) {
+    }
+
     public String getTitulo() {
         return titulo;
     }
