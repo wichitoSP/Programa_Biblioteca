@@ -87,6 +87,16 @@ public class Main {
     }
 
     private static void mostarPrestamos() {
+        if (prestamos.isEmpty()){
+            System.out.println("No hay prestamos registrados....");
+
+            return;
+        }
+        System.out.println("/n--- Lista de Prestamos ---");
+        for (int i = 0; i<prestamos.size();i++){
+            System.out.println(i+"."+prestamos.get(i));
+
+        }
     }
 
     private static void mostarUsuarios() {
@@ -117,6 +127,12 @@ public class Main {
     }
 
     private static void prestarLibro() {
+        if(libros.isEmpty() || usuarios.isEmpty()){
+            System.out.println("Debe haber al menos un libro y un usuario registrado....");
+
+            return;
+        }
+
     }
 
     private static void registarUsuario() {
