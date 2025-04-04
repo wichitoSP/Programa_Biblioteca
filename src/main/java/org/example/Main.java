@@ -97,6 +97,12 @@ public class Main {
             System.out.println(i+"."+prestamos.get(i));
 
         }
+
+        int count= 0;
+        if(count == 0) {
+            System.out.println("No hay préstamos activos.");
+        }
+
     }
 
     private static void mostarUsuarios() {
@@ -124,6 +130,28 @@ public class Main {
     }
 
     private static void devolverLibro() {
+
+        if(prestamos.isEmpty()){
+            System.out.println("No hay prestamos activos....");
+            return;
+        }
+        mostarPrestamos();
+        System.out.println("Selecione el numero del prestamo a devolver: ");
+        int indexPrestamo = scanner.nextInt();
+
+        if (indexPrestamo>=0 && indexPrestamo <prestamos.size()){
+            Prestamo prestamo = prestamos.get(indexPrestamo);
+            if (prestamo.getFechaDevolucion() == null){
+                prestamo.devolverLibro();
+
+                System.out.println("Libro devuelto exitosamente....");
+            }else {
+                System.out.println("Este prestamo ya fue devuelto..");
+            }
+        }else {
+            System.out.println("Seleccion invalida.....");
+        }
+
     }
 
     private static void prestarLibro() {
@@ -165,4 +193,6 @@ public class Main {
 
 
     }
+
+
 }

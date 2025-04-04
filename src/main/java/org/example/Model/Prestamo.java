@@ -47,4 +47,7 @@ public class Prestamo {
     public void setFechaDevolucion(LocalDate fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
+
+    public void devolverLibro() {
+    }
 }
