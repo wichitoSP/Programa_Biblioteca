@@ -149,7 +149,7 @@ public class Main {
                 System.out.println("Este prestamo ya fue devuelto..");
             }
         }else {
-            System.out.println("Seleccion invalida.....");
+            System.out.println("Seleccion invalida..... ");
         }
 
     }
