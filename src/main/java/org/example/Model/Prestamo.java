@@ -49,5 +49,15 @@ public class Prestamo {
     }
 
     public void devolverLibro() {
+
+    }
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+                "libro=" + libro.getTitulo() +
+                ", usuario=" + usuario.getNombre() +
+                ", fechaPrestamo=" + fechaPrestamo +
+                ", fechaDevolucion=" + fechaDevolucion +
+                '}';
     }
 }
