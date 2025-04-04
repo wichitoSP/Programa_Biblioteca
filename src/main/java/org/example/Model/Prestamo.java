@@ -1,4 +1,4 @@
 package org.example.Model;
 
-public class Revista {
+public class Prestamo {
 }
